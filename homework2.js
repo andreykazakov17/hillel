@@ -10,6 +10,7 @@
 // 	alert("x равна 0");
 // }
 
+
 // Задача 2
 
 // let userCash = +prompt("Сколько у Вас денег?", "");
@@ -21,6 +22,7 @@
 // 	alert("Придется пить пиво(");
 // }
 
+
 // Задача 3
 
 // let age = +prompt("Ваш возраст?", "");
@@ -28,6 +30,7 @@
 // if (age >= 20 && age < 27) {
 // 	alert("Выслать повестку");
 // }
+
 
 // Задача 4
 
@@ -49,8 +52,8 @@
 // 	alert("Отдыхаем.");
 // }
 
-// Задача 6
 
+// Задача 6
 
 // let x = +prompt("Введите переменную x:", "");
 // let y = +prompt("Введите переменную y:", "");
@@ -66,6 +69,7 @@
 // 	alert("Неверно!");
 // } 
 
+
 // Задача 7
 
 // let x = +prompt("Введите переменную x:", "");
@@ -76,6 +80,7 @@
 // } else {
 // 	alert(`Результат: ${x + 5}`);
 // }
+
 
 // Задача 8
 
@@ -88,6 +93,7 @@
 // if (userName) {
 // 	alert("Hi!")
 // }
+
 
 // Задача 9 - не получается сделать проверку циклом while по типу такой:
 // while (lang !== "ru" || lang !== "en" || lang !== "de") {
@@ -128,6 +134,7 @@
 // 	break;
 // }
 
+
 // Задача 10
 
 // let month = new Date().getMonth();
@@ -142,6 +149,7 @@
 // } else if (month >= 8 && month <= 10) {
 // 	alert("Сейчас осень!");
 // }
+
 
 // Задача 11
 
@@ -215,6 +223,7 @@
 // 	break;
 // }
 
+
 // Задача 12
 
 // let userName = prompt("Введите имя", "");
@@ -252,7 +261,9 @@
 // 	console.log("Пока");
 // }
 
+
 // --- Циклы
+
 
 // Задача 1
 
@@ -264,6 +275,7 @@
 
 // alert(str);
 
+
 // Задача 2
 
 // for (let i = 2; i <= 10; i++) {
@@ -271,6 +283,7 @@
 // 		console.log(i * 2);
 // 	}
 // }
+
 
 // Задача 3
 
@@ -282,4 +295,53 @@
 // 	}
 // 	console.log("Happy birthday to you");
 // } 
+
+
+// Задача 4
+
+// let popup = confirm("Прервать цикл?");
+
+// while (popup === false) {
+// 	popup = confirm("Прервать цикл?");
+// }
+
+
+// Задача 5
+
+// let num = +prompt("Введите число диапазона", "");
+// let sum = 0;
+
+// for (let i = 1; i <= num; i += 2) {
+// 	sum += i;
+// 	console.log(sum);
+// }
+// alert(`Сумма нечетных чисел: ${sum}`);
+
+
+// Задача 6
+
+// let randomNum;
+// let counter = 0;
+
+// while (true) {
+
+// 	counter++;
+// 	randomNum = Math.random();
+
+// 	if (randomNum > 0.9) break;
+// }
+
+// alert(`Число, прервавшее цикл - ${randomNum}\nКоличество итераций - ${counter}`);
+
+// Задача 7
+
+// let result = "";
+
+// for (let i = 1; i < 10; i++) {
+// 	for (let j = 1; j < 10; j++) {
+// 		result = result + `${i} * ${j} = ${j * i} \xa0\xa0\xa0\xa0\xa0`;
+// 	}
+// 	result += "<br>";
+// }
+// document.documentElement.innerHTML = result;
 
