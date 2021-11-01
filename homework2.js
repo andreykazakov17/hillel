@@ -95,16 +95,18 @@
 // }
 
 
-// Задача 9 - не получается сделать проверку циклом while по типу такой:
+// Задача 9
+
+// let greeting = "";
+// let lang;
+
 // while (lang !== "ru" || lang !== "en" || lang !== "de") {
 // 	lang = prompt("Введите значение:", "");
 // 	console.log(lang);
+// 	if (lang === "ru" || lang === "en" || lang === "de") break;
 // }
 
-// let greeting = "";
-// let lang = prompt("Введите значение:", "");
-
-// if-else
+// // if-else
 
 // if (lang === "ru") {
 // 	greeting = "Привет, друг!";
@@ -345,3 +347,82 @@
 // }
 // document.documentElement.innerHTML = result;
 
+// Задача 8
+
+// let i = 0, x = 0, y = 1;
+
+// for(;;) {
+// 	if (i <= 10) {
+// 		alert(x + y);
+// 		let z = x + y;
+// 		x = y;
+// 		y = z;
+// 	} else {
+// 		break;
+// 	}
+// 	i++;
+// }
+
+
+// С пустым телом цикла
+
+// let str = "";
+// for(let i = 0, x = 0, y = 1, z; i <= 10; i++, z = x + y, x = y, y = z, str = str + y + " ") {
+ 
+// }
+// console.log(str);
+
+// Задача 9
+
+// let sum = 0;
+// let counter = 0;
+
+// while (true) {
+
+// 	counter++;
+// 	let num = +prompt("Введите число", "");
+// 	sum += num;
+
+// 	if (!num) break;
+// }
+
+// alert(`Количество введенных чисел - ${counter - 1} \nСумма чисел - ${sum} \nСреднее арифметическое - ${Math.round(sum / counter)}`);
+
+// Задача 10
+
+// let password = "123";
+// let enterPassword = "";
+
+// while(enterPassword !== password) {
+// 	enterPassword = prompt("Введите пароль", "");
+
+// 	if(enterPassword === "" || !enterPassword) {
+// 		let question = confirm("Вы уверены, что хотите отменить авторизацию?");
+// 		if (question === true) {
+// 			alert("Вы отменили авторизацию");
+// 			break;
+// 		} else {
+// 			enterPassword = prompt("Введите пароль", "");
+// 		}
+// 	}
+// }
+
+// if(enterPassword === password) {
+// 	alert("Вы успешно авторизованы.");
+// }
+
+// Задача 11
+
+
+// for(let i = 1; i <= 50; i++) {
+
+// 	if((i % 3 == 0) && (i % 5 == 0)) {
+// 		console.log("FizzBuzz");
+// 	} else if (i % 3 == 0) {
+// 		console.log("Fizz");
+// 	} else if (i % 5 == 0) {
+// 		console.log("Buzz");
+// 	} else {
+// 		console.log(i);
+// 	}
+// }
