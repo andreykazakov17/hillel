@@ -9,26 +9,26 @@
 
 // Задача 2
 
-// function getMinNum(firstNum, secondNum, ...restNums) {
-// 	if(firstNum < secondNum && restNums === undefined) {
-// 		return firstNum;
-// 	} else if (firstNum > secondNum && restNums === undefined) {
-// 		return secondNum;
-// 	} else if (restNums !== undefined) {
-// 		restNums.join(", ");
-// 		restNums.unshift(firstNum, secondNum);
+function getMinNum(firstNum, secondNum, ...restNums) {
+	if(firstNum < secondNum && restNums === undefined) {
+		return firstNum;
+	} else if (firstNum > secondNum && restNums === undefined) {
+		return secondNum;
+	} else if (restNums !== undefined) {
+		restNums.join(", ");
+		restNums.unshift(firstNum, secondNum);
 
-// 		let minNum = restNums[0];
-// 		for(let i = 1; i < restNums.length; ++i) {
+		let minNum = restNums[0];
+		for(let i = 1; i < restNums.length; ++i) {
 
-// 			if (restNums[i] < minNum) {
-// 				minNum = restNums[i];
-// 			}
+			if (restNums[i] < minNum) {
+				minNum = restNums[i];
+			}
 			
-// 		}
-// 		return minNum;
-// 	}
-// }
+		}
+		return minNum;
+	}
+}
 
 // console.log(getMinNum(7, 4, 8, 1, 21, 6, 2));
 // console.log(getMinNum(21, 56));

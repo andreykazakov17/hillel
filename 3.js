@@ -402,43 +402,42 @@ const objects = [
 // console.log(reducer);
 
 
-let dateObj = objects.reduce((acc, item) => {
+// let dateObj = objects.reduce((acc, item) => {
 
-	let year = (item.date.split("-"))[2];
-	let month = (item.date.split("-"))[1];
-	// let months = 
+// 	let year = (item.date.split("-"))[2];
+// 	let month = (item.date.split("-"))[1];
+// 	// let months = 
 
-	//let monthsArr = [1];
+// 	//let monthsArr = [1];
 	
-	let monthObj = {};
-	let yearObj = {};
+// 	let monthObj = {};
+// 	let yearObj = {};
 
-	if(!acc[year]) {
-		yearObj = {...acc, [year]: monthObj};
-		if(!yearObj[month]) {
-			monthObj = {...acc, [month]: item};
-			//monthObj = {...acc, [month]: item};
-			return yearObj;
-			
-		}
-		//return yearObj;
-	} else {
+// 	if(!acc[year]) {
+// 		acc = {...acc, [year]: {}};
+// 		if(!acc[year][month]) {
+// 			acc = {...acc, [year]: {...acc[year], [month]: []}};
+// 			if(!acc[year][month][item]) {
+// 				acc = {...acc, [year]: {...acc[year], [month]: [{...item}]}};
+// 			}
+// 		}
+// 		//return acc;
+// 	}
 
-		return acc;
-	}
-
-	// if(!yearObj[month]) {
-	// 	monthObj = {...acc, [month]: []};
-	// 	return monthObj;
-	// } else if (monthObj[month]) {
-	// 	return acc;
-	// }
+// 	// if(!yearObj[month]) {
+// 	// 	monthObj = {...acc, [month]: []};
+// 	// } else if (monthObj[month]) {
+// 	// 	return acc;
+// 	// }
 	
 	
+// 	return acc;
+	
+	
+// }, {});
 
-	
-	
-	
-}, {});
+// console.log(dateObj);
 
-console.log(dateObj);
+
+
+

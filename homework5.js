@@ -202,7 +202,29 @@ const objects = [
 
 
 
-// console.log(relationArr);
+// Задача 3
+
+// let dateObj = objects.reduce((acc, item) => {
+
+// 	let year = (item.date.split("-"))[2];
+// 	let month = (item.date.split("-"))[1];
+	
+// 	if(!acc[year]) {
+// 		acc[year] = {};
+// 	}
+// 	if(!acc[year][month]) {
+// 		acc[year][month] = [];
+// 	}
+// 	if(acc[year][month]) {
+// 		acc[year][month] = [...acc[year][month], item];
+// 	}
+
+// 	return acc;
+	
+	
+// }, {});
+
+// console.log(dateObj);
 
 
 // Задача 4
@@ -218,7 +240,7 @@ const objects = [
 	
 // }, []);
 
-//console.log(relationArr);
+// console.log(relationArr);
 
 
 // Задача 5
@@ -243,20 +265,20 @@ const objects = [
 
 // Задача 6
 
-let relationArr = objects.reduce((acc, item) => {
+// let relationArr = objects.reduce((acc, item) => {
 
-	if(item.relation !== null) {
+// 	if(item.relation !== null) {
 
-		let id = item.relation.relationId;
-		let relationIdArr = objects.filter((item) => item.relation?.relationId === id);
+// 		let id = item.relation.relationId;
+// 		let relationIdArr = objects.filter((item) => item.relation?.relationId === id);
 
-		return {...acc, [id]: relationIdArr};
-	}
-	return acc;
+// 		return {...acc, [id]: relationIdArr};
+// 	}
+// 	return acc;
 	
-}, {});
+// }, {});
 
-console.log(relationArr);
+// console.log(relationArr);
 
 //--------- Старое решение
 
@@ -281,21 +303,6 @@ console.log(relationArr);
 
 // Задача 7
 
-// let dateArr = objects.map((item) => {
-	
-// 	//let filterArr = objects.filter((item) => item.date.includes("2020"));
-// 	if(item.date.includes("2020")) {
-// 		if(item.enabled === false) {
-// 			item.enabled = true;
-// 		}
-// 		return item;
-// 	}
-// });
-
-// console.log(dateArr);
-//console.log(objects);
-
-
 //--Решение через reduce
 
 // let dateArr = objects.reduce((acc, item) => {
@@ -315,45 +322,36 @@ console.log(relationArr);
 
 // Задача 8
 
-// let result = objects.map((item) => {
+let result = objects.map((item) => {
 
-// 	if(item.relation === null) {
-// 		item.enabled = false;
-// 		return item;
-// 	} else if(item.relation !== null){
-// 		let id = item.relation.relationId;
-// 		let findObj = objects.find((obj) => {
-// 			obj.id === id;
-// 			console.log(obj);
-// 			return obj;
-// 		});
-// 		item.enabled = findObj.enabled;
-// 		return item;
-// 	}
-// });
+	if(item.relation === null) {
+		// item.enabled = false;
+		// return item;
 
-// console.log(result);
-//console.log(objects);
-
-
-//--Решение через reduce
-
-// let result = objects.reduce((acc, item) => {
-	
-// 	if(item.relation === null) {
-// 		item.enabled = false;
-// 		return [...acc, item];
+		return {
+			...item,
+			enabled: false
+		};
 		
-// 	} else if(item.relation !== null) {
 
-// 		item.enabled = item.relation.relationId;
-// 		return [...acc, item];
-// 	}
-// 	return acc;
-	
-// }, []);
+	} else if(item.relation !== null){
+		let id = item.relation.relationId;
+		let findObj = objects.find((obj) => {
+			if(obj.id === id) {
+				return obj;
+			}
+		});
+		let result = {
+			...item,
+			enabled: findObj.enabled
+		};
 
-// console.log(result);
+		return result;
+	}
+});
+
+console.log(result);
+console.log(objects);
 
 
 // Задача 9
