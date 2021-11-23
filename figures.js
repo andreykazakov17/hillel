@@ -84,6 +84,33 @@ drawArea.add(topLine);
 let bottomLine = new Line(120, 620, 420, 490, "grey");
 drawArea.add(bottomLine);
 
+// зигзаг
+
+
+let firstLine = new Line(0, 0, 20, 20, "grey");
+let secondLine = new Line(20, 20, 40, 0, "grey");
+//let thirdLine = new Line(40, 0, 60, 20, "grey");
+drawArea.add(firstLine);
+drawArea.add(secondLine);
+
+function lineLoop(oddLine, evenLine) {
+	for(let i = 0; i < 100; i++) {
+		if(i % 2 === 1) {
+			oddLine.x = oddLine.x + 40;
+			oddLine.x1 = oddLine.x1 + 40;
+			drawArea.add(oddLine);
+		}
+	}
+	for(let i = 0; i < 100; i++) {
+		if(i % 2 === 0) {
+			evenLine.x = evenLine.x + 40;
+			evenLine.x1 = evenLine.x1 + 40;
+			drawArea.add(evenLine);
+		}
+	}
+}
+lineLoop(firstLine, secondLine);
+
 // Рисуем прямоугольники
 
 let pinkRect = new Rect(750, 250, "pink", 200, 100);
