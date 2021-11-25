@@ -46,7 +46,6 @@ function Circle(x, y, color, radius) {
 
 	this.draw = function(ctx) {
 		ctx.beginPath();
-		//ctx.strokeStyle = this.color;
 		ctx.fillStyle = this.color;
 		ctx.arc(this.x, this.y, this.radius, this.startAngle, this.radians);
 		ctx.fill();
@@ -59,39 +58,30 @@ function Canvas(id) {
 	let canvas = document.getElementById(id);
 	let ctx = canvas.getContext("2d");
 	ctx.globalAlpha = 0.5;
-
-	Line.call(this);
-	Rect.call(this);
-	Circle.call(this);
 	
-	this.add = function(figure) {
-		if(figure instanceof Rect) {
-			return figure.draw(ctx);
-		} else if(figure instanceof Line) {
-			return figure.draw(ctx);
-		} else if (figure instanceof Circle) {
-			return figure.draw(ctx);
+	this.add = function(...figures) {
+
+		for(let figure of figures) {
+			figure.draw(ctx);
 		}
 	};
 }
 
 let drawArea = new Canvas("canvasID");
 
-// Рисуем линии
+// Инициализация линий
 
 let topLine = new Line(100, 600, 400, 470, "grey");
 drawArea.add(topLine);
 let bottomLine = new Line(120, 620, 420, 490, "grey");
 drawArea.add(bottomLine);
 
-// зигзаг
 
+// Рисуем зигзаг
 
 let firstLine = new Line(0, 0, 20, 20, "grey");
 let secondLine = new Line(20, 20, 40, 0, "grey");
-//let thirdLine = new Line(40, 0, 60, 20, "grey");
-drawArea.add(firstLine);
-drawArea.add(secondLine);
+drawArea.add(firstLine, secondLine);
 
 function lineLoop(oddLine, evenLine) {
 	for(let i = 0; i < 100; i++) {
@@ -114,15 +104,12 @@ lineLoop(firstLine, secondLine);
 // Рисуем прямоугольники
 
 let pinkRect = new Rect(750, 250, "pink", 200, 100);
-drawArea.add(pinkRect);
 let greenRect = new Rect(710, 280, "#80ffcc", 120, 300);
-drawArea.add(greenRect);
 let yellowRect = new Rect(900, 300, "yellow", 150, 100);
-drawArea.add(yellowRect);
+drawArea.add(greenRect, yellowRect, pinkRect);
 
 // Рисуем окружности
 
 let blueSmallCircle = new Circle(220, 180, "#99ccff", 50);
 let blueBigCircle = new Circle(250, 250, "#99ccff", 80);
-drawArea.add(blueSmallCircle);
-drawArea.add(blueBigCircle);
+drawArea.add(blueSmallCircle, blueBigCircle);
