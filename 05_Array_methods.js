@@ -322,36 +322,36 @@ const objects = [
 
 // Задача 8
 
-let result = objects.map((item) => {
+// let result = objects.map((item) => {
 
-	if(item.relation === null) {
-		// item.enabled = false;
-		// return item;
+// 	if(item.relation === null) {
+// 		// item.enabled = false;
+// 		// return item;
 
-		return {
-			...item,
-			enabled: false
-		};
+// 		return {
+// 			...item,
+// 			enabled: false
+// 		};
 		
 
-	} else if(item.relation !== null){
-		let id = item.relation.relationId;
-		let findObj = objects.find((obj) => {
-			if(obj.id === id) {
-				return obj;
-			}
-		});
-		let result = {
-			...item,
-			enabled: findObj.enabled
-		};
+// 	} else if(item.relation !== null){
+// 		let id = item.relation.relationId;
+// 		let findObj = objects.find((obj) => {
+// 			if(obj.id === id) {
+// 				return obj;
+// 			}
+// 		});
+// 		let result = {
+// 			...item,
+// 			enabled: findObj.enabled
+// 		};
 
-		return result;
-	}
-});
+// 		return result;
+// 	}
+// });
 
-console.log(result);
-console.log(objects);
+// console.log(result);
+// console.log(objects);
 
 
 // Задача 9

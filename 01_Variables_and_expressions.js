@@ -51,10 +51,10 @@
 
 // Задача 7
 
-// let randomNumber = Math.floor(((Math.random() * 10) + 1) * 100);
-// let promptNumber = +prompt("Please, enter a number here", "");
-// let isBigger = randomNumber < promptNumber;
-// alert(`Results: ${randomNumber} is less than ${promptNumber} - ${isBigger} \nRandom number - ${randomNumber}, user number - ${promptNumber}`);
+let randomNumber = Math.floor(((Math.random() * 10) + 1) * 100);
+let promptNumber = +prompt("Please, enter a number here", "");
+let isBigger = randomNumber < promptNumber;
+alert(`Results: ${randomNumber} is less than ${promptNumber} - ${isBigger} \nRandom number - ${randomNumber}, user number - ${promptNumber}`);
 
 // Задача 8
 

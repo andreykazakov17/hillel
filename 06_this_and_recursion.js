@@ -1,23 +1,23 @@
 // Задача 1
 
-let calculator = {
-	read() {
-		this.x = +prompt("Введите значение", "");
-		this.y = +prompt("Введите значение", "");
-	},
-	sum() {
-		return this.x + this.y;
-	},
-	multi() {
-		return this.x * this.y;
-	},
-	diff() {
-		return this.x - this.y;
-	},
-	div() {
-		return this.x / this.y;
-	}
-};
+// let calculator = {
+// 	read() {
+// 		this.x = +prompt("Введите значение", "");
+// 		this.y = +prompt("Введите значение", "");
+// 	},
+// 	sum() {
+// 		return this.x + this.y;
+// 	},
+// 	multi() {
+// 		return this.x * this.y;
+// 	},
+// 	diff() {
+// 		return this.x - this.y;
+// 	},
+// 	div() {
+// 		return this.x / this.y;
+// 	}
+// };
 
 // console.log(calculator.read());
 // console.log(calculator.sum());
@@ -58,33 +58,33 @@ let calculator = {
 
 // Задача 4
 
-let getMathOper = {
-	getSum(x, y) {
-		this.x = x;
-		this.y = y;
-		return `${x} + ${y} = ${calculator.sum.call(this)}`;
-	},
-	getDiff(x, y) {
-		this.x = x;
-		this.y = y;
-		return `${this.x} - ${this.y} = ${calculator.diff.call(this)}`;
-	},
-	getMulti(x, y) {
-		this.x = x;
-		this.y = y;
-		return `${this.x} * ${this.y} = ${calculator.multi.call(this)}`;
-	},
-	getDiv(x, y) {
-		this.x = x;
-		this.y = y;
-		return `${this.x} / ${this.y} = ${calculator.div.call(this)}`;
-	}
-};
+// let getMathOper = {
+// 	getSum(x, y) {
+// 		this.x = x;
+// 		this.y = y;
+// 		return `${x} + ${y} = ${calculator.sum.call(this)}`;
+// 	},
+// 	getDiff(x, y) {
+// 		this.x = x;
+// 		this.y = y;
+// 		return `${this.x} - ${this.y} = ${calculator.diff.call(this)}`;
+// 	},
+// 	getMulti(x, y) {
+// 		this.x = x;
+// 		this.y = y;
+// 		return `${this.x} * ${this.y} = ${calculator.multi.call(this)}`;
+// 	},
+// 	getDiv(x, y) {
+// 		this.x = x;
+// 		this.y = y;
+// 		return `${this.x} / ${this.y} = ${calculator.div.call(this)}`;
+// 	}
+// };
 
-alert(getMathOper.getSum(7, 2));
-alert(getMathOper.getDiff(7, 2));
-alert(getMathOper.getMulti(7, 2));
-alert(getMathOper.getDiv(1, 0));
+// alert(getMathOper.getSum(7, 2));
+// alert(getMathOper.getDiff(7, 2));
+// alert(getMathOper.getMulti(7, 2));
+// alert(getMathOper.getDiv(1, 0));
 
 
 // Задача 5
